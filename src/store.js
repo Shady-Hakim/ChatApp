@@ -98,15 +98,22 @@ class Rooms {
   // Retrieves all rooms from the database
   async getRooms() {
     this.roomsIsLoading = true;
-    const data = await getAllRooms();
-    const sortedData = data
-      .sort((a, b) => a.createdTime - b.createdTime)
-      .reverse();
+    const roomsCollectionRef = collection(db, 'rooms');
 
-    runInAction(() => {
-      this.rooms = sortedData;
-      this.roomsIsLoading = false;
+    const unsubscribe = onSnapshot(roomsCollectionRef, querySnapshot => {
+      const data = querySnapshot.docs.map(doc => ({id: doc.id, ...doc.data()}));
+      const sortedData = data
+        .sort((a, b) => a.createdTime - b.createdTime)
+        .reverse();
+
+      runInAction(() => {
+        this.rooms = sortedData;
+        this.roomsIsLoading = false;
+      });
     });
+
+    // Store the unsubscribe function in case you want to stop listening later
+    this.unsubscribeRooms = unsubscribe;
   }
 
   // Retrieves all users from the database
