@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "340517585127",
+    "project_id": "oncare-chat",
+    "storage_bucket": "oncare-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340517585127:android:373facf13cae855bd82242",
+        "android_client_info": {
+          "package_name": "com.oncare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "340517585127-lh08s106iq6bbjklvj6s7fmuvs63vsv3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYwyYQCkFUZGzg6Pn9Nchz0KGL0hdB5vo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "340517585127-lh08s106iq6bbjklvj6s7fmuvs63vsv3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "340517585127-ut4a0bifdr302qij9b01r80867anll0j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.oncare"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
