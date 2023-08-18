@@ -31,7 +31,7 @@ const InputSection = ({roomId, messageItem, setIsEdit}) => {
 
   return (
     <Formik
-      initialValues={{message: messageItem?.messageBody}}
+      initialValues={{message: messageItem?.messageBody || ''}}
       onSubmit={(values, {setSubmitting, resetForm}) => {
         // Handle sending the message and resetting the form
         handleSendingMessage(values.message);
